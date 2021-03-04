@@ -15,7 +15,7 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::orderBy('id','DESC')->get();
-        return view('Product.index' , ['products' => $products] );
+        return view('product.index' , ['products' => $products] );
     }
     /**
      * Show the form for creating a new resource.
@@ -95,9 +95,6 @@ class ProductController extends Controller
         if ($request->file('file')){
             $product->image = $request->file('file')->store('product','public');
         }
-
-
-
         $product->update();
         return back();
     }
@@ -124,7 +121,7 @@ class ProductController extends Controller
     {
         $products = Product::all();
         //return $products;
-        return view('Product.catalogue' , ['products' => $products] );
+        return view('product.catalogue' , ['products' => $products] );
     }
 
 
