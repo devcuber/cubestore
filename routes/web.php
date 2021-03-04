@@ -51,6 +51,6 @@ Route::put('order.changestatus/{order}', [OrderController::class,'changestatus']
 use App\Http\Controllers\OrderLineController;
 Route::resource('order_line',  OrderLineController::class )->middleware('auth');
 
-Auth::routes();
+//Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth');
