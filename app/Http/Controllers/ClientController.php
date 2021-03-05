@@ -18,7 +18,7 @@ class ClientController extends Controller
         $clients = Client::where('is_active',true)
                             ->orderBy('id', 'DESC')
                             ->get();
-        return view('Client.index' , ['clients' => $clients] );
+        return view('client.index' , ['clients' => $clients] );
     }
 
     /**
@@ -126,7 +126,7 @@ class ClientController extends Controller
         $clients = Client::where('is_active',true)
                             ->orderBy('id', 'DESC')
                             ->get();
-        return view('Client.dropdownlist' , ['clients' => $clients] );
+        return view('client.dropdownlist' , ['clients' => $clients] );
     }
 
 
