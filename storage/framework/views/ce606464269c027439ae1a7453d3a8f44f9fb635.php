@@ -13,7 +13,7 @@
             <div class="card" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title"><?php echo e($product->name); ?></h5>
-                <img class="card-img-top" src="<?php echo e($product->Get_Image); ?>" alt="<?php echo e($product->name); ?>">
+                <img class="card-img-top" src="<?php echo e($product->image); ?>" alt="<?php echo e($product->name); ?>">
                 <h6 class="card-subtitle mb-2 text-muted"><?php echo e($product->category); ?></h6>
                 <h6 class="card-subtitle mb-2 text-muted"> Precio: Lps <?php echo e($product->price); ?></h6>
                 <h6 class="card-subtitle mb-2 text-muted"> Envío: Lps 70 - Lps 100</h6>

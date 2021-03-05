@@ -42,11 +42,10 @@
                 <tr>
                     <form   action  ="{{route('product.update',$product)}}"
                             method  ="POST"
-                            enctype = "multipart/form-data"
                     >
                         @method('PUT')
                         @csrf
-                        <td> <img style="height: 50px; width: 50px" src="{{$product->Get_Image}}" alt="{{$product->name}}" ></td>
+                        <td> <img style="height: 50px; width: 50px" src="{{$product->image}}" alt="{{$product->name}}" ></td>
                         <td> <input type="text"     name="code"          class="form-control"   value="{{$product->code}}" ></td>
                         <td> <input type="text"     name="name"          class="form-control"   value="{{$product->name}}" ></td>
                         <td> <input type="text"     name="option"        class="form-control"   value="{{$product->option}}" ></td>
@@ -54,7 +53,7 @@
                         <td> <input type="number"   name="cost"          class="form-control"   value="{{$product->cost}}" ></td>
                         <td> <input type="number"   name="price"         class="form-control"   value="{{$product->price}}" ></td>
                         <td> <input type="number"   name="available"     class="form-control"   value="{{$product->available}}" ></td>
-                        <td> <input type="file"     name="file"          class="form-control"   ></td>
+                        <td> <input type="text"     name="image"         class="form-control"   value="{{$product->image}}"></td>
                         <td> <input type="checkbox" name="is_deprecated" class="form-check-input" {{ ($product->is_deprecated)?'checked':'' }} ></td>
                         <td><input type="submit" class="btn btn-sm btn-primary" value="Guardar"></td>
                     </form>

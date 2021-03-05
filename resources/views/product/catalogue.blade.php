@@ -13,7 +13,7 @@
             <div class="card" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">{{$product->name}}</h5>
-                <img class="card-img-top" src="{{$product->Get_Image}}" alt="{{$product->name}}">
+                <img class="card-img-top" src="{{$product->image}}" alt="{{$product->name}}">
                 <h6 class="card-subtitle mb-2 text-muted">{{$product->category}}</h6>
                 <h6 class="card-subtitle mb-2 text-muted"> Precio: Lps {{$product->price}}</h6>
                 <h6 class="card-subtitle mb-2 text-muted"> Envío: Lps 70 - Lps 100</h6>

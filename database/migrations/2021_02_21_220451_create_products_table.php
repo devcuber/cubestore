@@ -22,7 +22,7 @@ class CreateProductsTable extends Migration
             $table->string ('seller'       );
             $table->decimal('price'   ,6,2 );
             $table->decimal('cost'    ,6,2 );
-            $table->string ('image'        ) -> nullable();
+            $table->text   ('image'        ) -> nullable();
             $table->string ('category'     );
             $table->integer('available'    );
             $table->boolean('is_deprecated');

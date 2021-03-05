@@ -28,10 +28,10 @@ class Product extends Model
         'is_active'     => true
     ];
 
-    public function getGetImageAttribute(){
-        if ($this->image) 
-            return url( 'storage/'.$this->image);
-    }
+    //public function getGetImageAttribute(){
+    //    if ($this->image) 
+    //        return url( 'storage/'.$this->image);
+    //}
 
     public function getGetNameAttribute(){
         return ($this->option)?$this->name . ' [' . $this->option . ']':$this->name;

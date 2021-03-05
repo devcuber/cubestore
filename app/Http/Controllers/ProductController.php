@@ -87,14 +87,14 @@ class ProductController extends Controller
         //$product->seller      = $request->seller;
         $product->price         = $request->price;
         $product->cost          = $request->cost;
-        //$product->image       = $request->image;
+        $product->image         = $request->image;
         $product->category      = $request->category;
         $product->available     = $request->available;
         $product->is_deprecated = isset($request->is_deprecated);
 
-        if ($request->file('file')){
-            $product->image = $request->file('file')->store('product','public');
-        }
+        //if ($request->file('file')){
+        //    $product->image = $request->file('file')->store('product','public');
+        //}
         $product->update();
         return back();
     }
