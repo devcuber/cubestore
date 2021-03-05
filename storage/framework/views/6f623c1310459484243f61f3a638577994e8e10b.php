@@ -24,6 +24,16 @@
 </head>
 <body>
     <div id="app">
+        <?php if(app()->environment('local')): ?>
+            <nav class="navbar navbar-dark bg-info"> 
+                <span class="navbar-brand">
+                Ambiente de Pruebas
+                </span>
+                <span class="navbar-brand">
+                user:admin@admin.com pass:12345678
+                </span>
+            </nav> 
+        <?php endif; ?>
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="<?php echo e(url('/')); ?>">
