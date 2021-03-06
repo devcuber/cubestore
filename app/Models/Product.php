@@ -43,5 +43,9 @@ class Product extends Model
         return "https://api.whatsapp.com/send?phone=50497677876&text=Estoy%20interesado%20en%20este%20producto%20".$name;
     }
 
+    public function getHasImageAttribute(){
+        return ($this->image)?true:false;
+    }
+
 
 }

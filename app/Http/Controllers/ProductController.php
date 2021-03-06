@@ -14,7 +14,10 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::orderBy('id','DESC')->get();
+        $products = Product::where('is_active',true)
+        ->get()
+        ->sortBy(['is_deprecated','hasimage','name']);
+
         return view('product.index' , ['products' => $products] );
     }
     /**
