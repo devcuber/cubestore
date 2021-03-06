@@ -119,7 +119,10 @@ class ProductController extends Controller
      */
     public function catalogue()
     {
-        $products = Product::all();
+        $products = Product::where('is_active',true)
+                    ->whereNotNull('image')
+                    ->orderBy('name')
+                    ->get();
         //return $products;
         return view('product.catalogue' , ['products' => $products] );
     }
