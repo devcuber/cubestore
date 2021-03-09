@@ -45,17 +45,19 @@ class Order extends Model
     }
 
     public function SetOrderCode(){
-        $number =   Order::
-                    where('created_at' , '>=' , strtotime("today"))
-                    ->max( 'day_order_num');
+        $number =   0;
+        try {
+            $number =   Order::
+                        where('created_at' , '>=' , strtotime("today"))
+                        ->max( 'day_order_num');
+        } catch (\Throwable $th) {
+            $number = 0;
+        }
         $this->day_order_num = $number + 1;
-
     }
 
     public function getGetTotalAttribute(){
-        
         return $this->order_lines->sum('GetTotal');
-
         $total = 0;
         foreach( $this->order_lines as $order_line)
             $total += $order_line->GetTotal;
@@ -76,6 +78,12 @@ class Order extends Model
     ////////////////////////////////////////////////
     public function getGetNextStatusAttribute(){
         return Status::where('code', $this->GetStatus->next_code )->first();
+    }
+
+    public function getGetShippingInfoTextAttribute(){
+        $text = "{$this->client}";
+
+        return "preparacion de texto";
     }
 
 

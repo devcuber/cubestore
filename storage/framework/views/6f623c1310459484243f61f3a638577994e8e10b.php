@@ -47,13 +47,12 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                     <?php if(auth()->guard()->check()): ?>
-                        <li class="list-inline-item"><a href="<?php echo e(route('order.index')); ?>">Ventas</a></li>
-                        <li class="list-inline-item"><a href="<?php echo e(route('product.index')); ?>">Inventario</a></li>
-                        <li class="list-inline-item"><a href="<?php echo e(route('client.index')); ?>">Clientes</a></li>
-                        <li class="list-inline-item"><a href="<?php echo e(route('catalogue')); ?>">Catalogo</a></li>
+                        <li class="list-inline-item"><a href="<?php echo e(route('order.index')); ?>">    Ventas      </a></li>
+                        <li class="list-inline-item"><a href="<?php echo e(route('product.index')); ?>">  Inventario  </a></li>
+                        <li class="list-inline-item"><a href="<?php echo e(route('client.index')); ?>">   Clientes    </a></li>
+                        <li class="list-inline-item"><a href="<?php echo e(route('catalogue')); ?>">      Catalogo    </a></li>
                     <?php endif; ?>
                     </ul>
-
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
@@ -100,9 +99,13 @@
         </main>
         <footer class="footer">
             <div class="container">
-                <span class="text-muted float-right">
-                    Sitio creado por <a target="_blank" href="https://devcuber.github.io/">José Jiménez.</a>
-                </span>
+                <div class="row">
+                    <div class="col">
+                        <span class="text-muted float-right">
+                            Sitio creado por <a target="_blank" href="https://devcuber.github.io/">José Jiménez.</a>
+                        </span>
+                    </div>
+                </div>
             </div>
         </footer>
 

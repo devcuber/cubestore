@@ -8,9 +8,9 @@
                 </h1>
             </div>
         <br>
-        <div class="row">
+        <div class="row justify-content-around">
             @foreach($products as $product)
-            <div class="card" style="width: 18rem;">
+            <div class="card mt-2 mb-2" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">{{$product->name}}</h5>
                 <img class="card-img-top" src="{{$product->image}}" alt="{{$product->name}}">

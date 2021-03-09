@@ -46,13 +46,12 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                     @auth
-                        <li class="list-inline-item"><a href="{{route('order.index')}}">Ventas</a></li>
-                        <li class="list-inline-item"><a href="{{route('product.index')}}">Inventario</a></li>
-                        <li class="list-inline-item"><a href="{{route('client.index')}}">Clientes</a></li>
-                        <li class="list-inline-item"><a href="{{route('catalogue')}}">Catalogo</a></li>
+                        <li class="list-inline-item"><a href="{{route('order.index')}}">    Ventas      </a></li>
+                        <li class="list-inline-item"><a href="{{route('product.index')}}">  Inventario  </a></li>
+                        <li class="list-inline-item"><a href="{{route('client.index')}}">   Clientes    </a></li>
+                        <li class="list-inline-item"><a href="{{route('catalogue')}}">      Catalogo    </a></li>
                     @endauth
                     </ul>
-
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
@@ -97,9 +96,13 @@
         </main>
         <footer class="footer">
             <div class="container">
-                <span class="text-muted float-right">
-                    Sitio creado por <a target="_blank" href="https://devcuber.github.io/">José Jiménez.</a>
-                </span>
+                <div class="row">
+                    <div class="col">
+                        <span class="text-muted float-right">
+                            Sitio creado por <a target="_blank" href="https://devcuber.github.io/">José Jiménez.</a>
+                        </span>
+                    </div>
+                </div>
             </div>
         </footer>
 

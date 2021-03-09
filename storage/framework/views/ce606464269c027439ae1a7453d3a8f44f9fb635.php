@@ -8,9 +8,9 @@
                 </h1>
             </div>
         <br>
-        <div class="row">
+        <div class="row justify-content-around">
             <?php $__currentLoopData = $products; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $product): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <div class="card" style="width: 18rem;">
+            <div class="card mt-2 mb-2" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title"><?php echo e($product->name); ?></h5>
                 <img class="card-img-top" src="<?php echo e($product->image); ?>" alt="<?php echo e($product->name); ?>">

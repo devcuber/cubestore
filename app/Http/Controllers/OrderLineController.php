@@ -82,8 +82,14 @@ class OrderLineController extends Controller
      * @param  \App\Models\Order_Line  $order_Line
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Order_Line $order_Line)
+    //public function destroy(Order_Line $order_Line)
+    public function destroy( $order_line_id)
     {
-        //
+        $order_line = Order_Line::find($order_line_id);
+        $order = $order_line->order;
+        $order_line->delete();
+        return view('order.edit' , [
+            'order' => $order
+        ]);
     }
 }

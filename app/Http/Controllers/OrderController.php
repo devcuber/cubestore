@@ -21,10 +21,10 @@ class OrderController extends Controller
     public function index()
     {
         $orders = Order::where('is_active',true)->get();
+
         $orders = $orders ->filter(function( Order $order){
             return $order->GetStatus->priority > 0;
         });
-
         $orders = $orders ->sortBy(function( Order $order){
             return $order->GetStatus->priority * -1;
         });
