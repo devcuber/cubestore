@@ -2,12 +2,11 @@
 @section('content')
 
         <div class='container'>
-            <div class="col-sm-6 mx-auto">
-                <h1>
-                    Catálogo
-                </h1>
+            <div class="row">
+                <div class="col">
+                    <h1 class="text-center"> Catálogo </h1>
+                </div>
             </div>
-        <br>
         <div class="row justify-content-around">
             @foreach($products as $product)
             <div class="card mt-2 mb-2" style="width: 18rem;">

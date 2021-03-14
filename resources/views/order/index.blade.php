@@ -2,18 +2,20 @@
 @section('content')
 
 <div class="container">
+    <form action="{{route('order.store')}}" method="POST"> 
+    @csrf
+    @method('POST')
+    <input type="hidden"  name='client_id'          value ="1">
+    <input type="hidden"  name='shipping_info_id'   value ="1">
+    <input  type="submit"  
+            class="btn btn-primary btn-lg rounded-circle fixed-bottom"
+            value ="+"
+            style="left: 85%; bottom:3%;">
+    </form>
+
     <div class="row justify-content-around pb-4">
-        <div class="col-2">
-            <h2>Ordenes</h2>
-        </div>
-        <div class='col-2'>
-            <form action="{{route('order.store')}}" method="POST"> 
-            @csrf
-            @method('POST')
-            <input type="hidden"  name='client_id'          value ="1">
-            <input type="hidden"  name='shipping_info_id'   value ="1">
-            <input type="submit"  class="btn btn-primary btn-lg rounded-circle" value ="+">
-            </form>
+        <div class="col">
+            <h2 class="text-center">Ordenes</h2>
         </div>
     </div>
 
