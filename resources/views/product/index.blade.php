@@ -45,9 +45,9 @@
                         <td> <input type="text"     name="name"class="form-control-plaintext"   value="{{$product->name}}" ></td>
                         <td> <input type="text"     name="option"        class="form-control-plaintext"   value="{{$product->option}}" ></td>
                         <td> <input type="text"     name="category"      class="form-control-plaintext"   value="{{$product->category}}"  min="1" ></td>
-                        <td> <input type="number"   name="cost"class="form-control-plaintext"   value="{{$product->cost}}"      min="1" ></td>
-                        <td> <input type="number"   name="price"         class="form-control-plaintext"   value="{{$product->price}}"     min="1" ></td>
-                        <td> <input type="number"   name="available"     class="form-control-plaintext"   value="{{$product->available}}" min="1" ></td>
+                        <td> <input type="number"   name="cost"class="form-control-plaintext"   value="{{$product->cost}}"      min="0" ></td>
+                        <td> <input type="number"   name="price"         class="form-control-plaintext"   value="{{$product->price}}"     min="0" ></td>
+                        <td> <input type="number"   name="available"     class="form-control-plaintext"   value="{{$product->available}}" ></td>
                         <td> <input type="text"     name="image"         class="form-control-plaintext"   value="{{$product->image}}"></td>
                         <td> <input type="checkbox" name="is_deprecated" class="form-control-plaintext" {{ ($product->is_deprecated)?'checked':'' }} ></td>
                         <td><input type="submit" class="btn btn-sm btn-outline-primary" value="💾"></td>
