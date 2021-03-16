@@ -153,7 +153,8 @@ class OrderController extends Controller
         $clients = Client::where('is_active',true)
                             ->orderBy('id', 'DESC')
                             ->get();
-        return view('order.chooseclient' , ['clients' => $clients ,'order' => $order  ] );
+        //return view('order.chooseclient' , ['clients' => $clients ,'order' => $order  ] );
+        return view('client.index' , ['clients' => $clients ,'order' => $order  ] );
     }
 
     public function setclient(Request $request, Order $order)
@@ -166,7 +167,8 @@ class OrderController extends Controller
 
     public function chooseshippinginfo(Order $order)
     {
-        return view('order.chooseshippinginfo' , ['order' => $order , 'client' => $order->client] );
+        return view('client.edit' , ['order' => $order , 'client' => $order->client] );
+        //return view('order.chooseshippinginfo' , ['order' => $order , 'client' => $order->client] );
     }
 
     public function setshippinginfo(Request $request, Order $order)
@@ -182,7 +184,8 @@ class OrderController extends Controller
         ->orderBy('id', 'DESC')
         ->get();
 
-        return view('order.chooseproduct' , ['order' => $order , 'products' => $products] );
+        //return view('order.chooseproduct' , ['order' => $order , 'products' => $products] );
+        return view('product.catalogue' , ['order' => $order , 'products' => $products] );
     }
 
     public function setproduct(Request $request, Order $order)
