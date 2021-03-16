@@ -17,7 +17,7 @@
                 <h6 class="card-subtitle mb-2 text-muted"> Precio: Lps <?php echo e($product->price); ?></h6>
                 <h6 class="card-subtitle mb-2 text-muted"> Envío: Lps 70 - Lps 100</h6>
 
-                <?php if($order): ?>
+                <?php if(  isset($order)): ?>
                 <h6 class="card-subtitle mb-2 text-muted"> Disponible: <?php echo e($product->available); ?></h6>
                 <form action="<?php echo e(route('order.setproduct',$order)); ?>" method="POST">
                     <?php echo method_field('PUT'); ?>

@@ -17,7 +17,7 @@
                 <h6 class="card-subtitle mb-2 text-muted"> Precio: Lps {{$product->price}}</h6>
                 <h6 class="card-subtitle mb-2 text-muted"> Envío: Lps 70 - Lps 100</h6>
 
-                @if ($order)
+                @if (  isset($order))
                 <h6 class="card-subtitle mb-2 text-muted"> Disponible: {{$product->available}}</h6>
                 <form action="{{route('order.setproduct',$order) }}" method="POST">
                     @method('PUT')
